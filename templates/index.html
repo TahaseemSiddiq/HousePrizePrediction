@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h2>House Price Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Main Road (1: Yes, 0: No):</label>
+        <input type="number" name="mainroad" required><br>
+
+        <label>Guest Room (1: Yes, 0: No):</label>
+        <input type="number" name="guestroom" required><br>
+
+        <label>Air Conditioning (1: Yes, 0: No):</label>
+        <input type="number" name="airconditioning" required><br>
+
+        <label>Preferred Area (1: Yes, 0: No):</label>
+        <input type="number" name="prefarea" required><br>
+
+        <label>Furnishing Status (1: Unfurnished, 0: Furnished):</label>
+        <input type="number" name="furnishingstatus_unfurnished" required><br>
+
+        <label>Price per Sqft:</label>
+        <input type="number" step="any" name="price_per_sqft" required><br>
+
+        <label>Total Rooms:</label>
+        <input type="number" name="total_rooms" required><br>
+
+        <label>Total Floors:</label>
+        <input type="number" name="total_floors" required><br>
+
+        <label>Price per Bedroom:</label>
+        <input type="number" step="any" name="price_per_bedroom" required><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
